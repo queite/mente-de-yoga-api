@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run build && node ./dist/app.js",
     "dev": "ts-node index.ts",
-    "db:reset": "npx -y tsc && npx sequelize-cli db:drop && npx sequelize-cli db:create"
+    "db:reset": "npx -y tsc && npx sequelize-cli db:drop && npx sequelize-cli db:create",
+    "seed": "npx sequelize db:seed:all",
+    "migrations": "npx sequelize db:migrate"
   },
   "keywords": [],
   "author": "",
