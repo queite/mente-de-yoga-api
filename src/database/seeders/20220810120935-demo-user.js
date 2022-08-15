@@ -14,9 +14,9 @@ module.exports = {
         password: '123456',
       },
       {
-        name: 'Doe Read',
+        name: 'Doe Write',
         email: 'example2@example.com',
-        userPermission: 'read',
+        userPermission: 'write',
         password: '123456',
       },
     ]);
