@@ -14,6 +14,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jsonwebtoken": "^8.5.9",
+    "@types/sequelize": "^4.28.14",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^15.0.0",
@@ -27,8 +29,8 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "@types/sequelize": "^4.28.14",
     "dotenv": "^16.0.1",
+    "jsonwebtoken": "^8.5.1",
     "sequelize": "^6.21.3"
   }
 }
