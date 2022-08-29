@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && node ./dist/app.js",
-    "dev": "ts-node index.ts",
+    "start": "ts-node src/server.ts",
+    "dev": "ts-node ./src/server.ts",
     "db:reset": "npx -y tsc && npx sequelize-cli db:drop && npx sequelize-cli db:create",
     "seed": "npx sequelize db:seed:all",
     "migrations": "npx sequelize db:migrate"
@@ -14,6 +14,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/bcryptjs": "^2.4.2",
     "@types/express": "^4.17.13",
     "@types/jsonwebtoken": "^8.5.9",
     "@types/sequelize": "^4.28.14",
@@ -30,8 +32,10 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "express-async-errors": "^3.1.1",
     "jsonwebtoken": "^8.5.1",
     "sequelize": "^6.21.3"
   }

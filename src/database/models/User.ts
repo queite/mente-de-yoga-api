@@ -5,7 +5,7 @@ class User extends Model {
   id!: number;
   name!: string;
   email!: string;
-  userPermission!: 'admin' | 'read' | 'write';
+  userPermission!: 'admin' | 'student';
   password!: string;
 }
 
@@ -36,6 +36,7 @@ User.init({
 }, {
   sequelize: db,
   modelName: 'User',
+  tableName: 'users',
   timestamps: false,
 });
 
