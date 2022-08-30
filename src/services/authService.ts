@@ -11,6 +11,7 @@ export default class AuthService {
 
     // const checkPassword = compareSync(login.password, user.password);
     const checkPassword = login.password === user.password;
+
     if (!checkPassword) {
       throw new HttpException(401, 'Incorrect email or password');
     }
