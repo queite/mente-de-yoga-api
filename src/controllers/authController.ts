@@ -14,7 +14,11 @@ export default class AuthController {
     const user = await AuthService.login(req.body);
     if (!user) throw new HttpException(401, 'Incorrect email or password');
 
-    const token = JwtService.sign(user.email);
+    const token = JwtService.sign({
+      id: user.id,
+      email: user.email,
+      userPermission: user.userPermission,
+    });
     return res.status(200).json({ token });
   }
 }

@@ -1,4 +1,4 @@
-// import { compareSync } from 'bcrypt';
+import { compareSync } from 'bcrypt';
 import User from '../database/models/User';
 import HttpException from '../errors/httpException';
 import IUser, { ILogin } from '../interfaces/authInterfaces';
@@ -9,8 +9,7 @@ export default class AuthService {
 
     if (!user) throw new HttpException(401, 'Incorrect email or password');
 
-    // const checkPassword = compareSync(login.password, user.password);
-    const checkPassword = login.password === user.password;
+    const checkPassword = compareSync(login.password, user.password);
 
     if (!checkPassword) {
       throw new HttpException(401, 'Incorrect email or password');
