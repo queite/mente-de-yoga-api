@@ -1,4 +1,4 @@
-import { JwtPayload, sign, verify } from 'jsonwebtoken';
+import { sign, verify } from 'jsonwebtoken';
 import 'dotenv/config';
 import { IJwt } from '../interfaces/authInterfaces';
 
@@ -9,7 +9,7 @@ export default class JwtService {
     return sign(payload, secret);
   }
 
-  static verify(token: string): JwtPayload | string {
-    return verify(token, secret);
+  static verify(token: string): IJwt {
+    return verify(token, secret) as IJwt;
   }
 }

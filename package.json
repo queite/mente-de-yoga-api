@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/server.ts",
-    "dev": "ts-node ./src/server.ts",
+    "start": "ts-node --files src/server.ts",
+    "dev": "ts-node --files ./src/server.ts",
     "db:reset": "npx -y tsc && npx sequelize-cli db:drop && npx sequelize-cli db:create",
     "seed": "npx sequelize db:seed:all",
     "migrations": "npx sequelize db:migrate"
