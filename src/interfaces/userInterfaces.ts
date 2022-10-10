@@ -8,11 +8,11 @@ export interface ILogin {
 export default interface IUser extends ILogin {
   id: number
   name: string
-  userPermission: UserType
+  role: UserType
 }
 
 export interface IJwt {
   id: number
   email: string
-  userPermission: UserType
+  role: UserType
 }
