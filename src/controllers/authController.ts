@@ -17,7 +17,7 @@ export default class AuthController {
     const token = JwtService.sign({
       id: user.id,
       email: user.email,
-      userPermission: user.userPermission,
+      role: user.role,
     });
     return res.status(200).json({ token });
   }

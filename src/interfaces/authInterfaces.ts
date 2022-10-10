@@ -1,3 +1,5 @@
+export type Role = 'admin' | 'student';
+
 export interface ILogin {
   email: string
   password: string
@@ -6,11 +8,11 @@ export interface ILogin {
 export default interface IUser extends ILogin {
   id: number;
   name: string;
-  userPermission: 'admin' | 'student';
+  role: Role;
 }
 
 export interface IJwt {
   id: number;
   email: string;
-  userPermission: 'admin' | 'student';
+  role: Role;
 }
