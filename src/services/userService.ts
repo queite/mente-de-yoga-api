@@ -3,7 +3,7 @@ import IUser from '../interfaces/authInterfaces';
 
 type UserType = {
   name: string;
-  userPermission: 'admin' | 'student';
+  role: 'admin' | 'student';
   email: string;
   password: string;
 };
