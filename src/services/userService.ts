@@ -1,5 +1,5 @@
 import User from '../database/models/User';
-import IUser from '../interfaces/authInterfaces';
+import IUser from '../interfaces/userInterfaces';
 
 type UserType = {
   name: string;
@@ -10,7 +10,7 @@ type UserType = {
 
 export default class UserService {
   static async create(user: UserType): Promise<IUser> {
-    const createUser = await User.create(user);
-    return createUser;
+    const createdUser = await User.create(user);
+    return createdUser;
   }
 }
