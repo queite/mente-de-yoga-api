@@ -6,19 +6,19 @@ module.exports = {
       {
         name: 'Doe Admin',
         email: 'example@example.com',
-        userPermission: 'admin',
+        role: 'admin',
         password: bcrypt.hashSync('123456', 3),
       },
       {
         name: 'Doe Read',
         email: 'example1@example.com',
-        userPermission: 'read',
+        role: 'read',
         password:  bcrypt.hashSync('123456', 3),
       },
       {
         name: 'Doe Write',
         email: 'example2@example.com',
-        userPermission: 'write',
+        role: 'write',
         password: bcrypt.hashSync('123456', 3),
       },
     ]);

@@ -18,7 +18,7 @@ module.exports = {
         type: Sequelize.STRING(50),
         unique: true,
       },
-      userPermission: {
+      role: {
         type: Sequelize.STRING(10),
         allowNull: false,
       },

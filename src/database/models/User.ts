@@ -5,7 +5,7 @@ class User extends Model {
   id!: number;
   name!: string;
   email!: string;
-  userPermission!: 'admin' | 'student';
+  role!: 'admin' | 'student';
   password!: string;
 }
 
@@ -25,7 +25,7 @@ User.init({
     allowNull: false,
     unique: true,
   },
-  userPermission: {
+  role: {
     type: STRING,
     allowNull: false,
   },
