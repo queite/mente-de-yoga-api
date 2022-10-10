@@ -1,6 +1,6 @@
 import { sign, verify } from 'jsonwebtoken';
 import 'dotenv/config';
-import { IJwt } from '../interfaces/authInterfaces';
+import { IJwt } from '../interfaces/userInterfaces';
 
 const secret = process.env.JWT_SECRET || 'anyString';
 
