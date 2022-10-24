@@ -1,8 +1,10 @@
 import { Router } from 'express';
-import AuthController from '../controllers/authController';
+import AuthFactory from '../factories/authFactory';
 
 const router = Router();
 
-router.post('/', AuthController.Login);
+const authController = AuthFactory.make();
+
+router.post('/', (req, res) => authController.Login(req, res));
 
 export default router;

@@ -1,16 +1,10 @@
-import User from '../database/models/User';
 import IUser from '../interfaces/userInterfaces';
-
-type UserType = {
-  name: string;
-  userPermission: 'admin' | 'student';
-  email: string;
-  password: string;
-};
+import { IUserRepository } from '../interfaces/userRepository';
 
 export default class UserService {
-  static async create(user: UserType): Promise<IUser> {
-    const createdUser = await User.create(user);
-    return createdUser;
+  constructor(private repo: IUserRepository) {}
+
+  async create(user: IUser): Promise<IUser | null> {
+    return this.repo.create(user);
   }
 }

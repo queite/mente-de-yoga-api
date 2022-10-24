@@ -4,14 +4,16 @@ import AuthService from '../services/authService';
 import JwtService from '../services/jwtService';
 
 export default class AuthController {
-  static async Login(req: Request, res: Response) {
+  constructor(private authService: AuthService) {}
+
+  async Login(req: Request, res: Response) {
     const { email, password } = req.body;
 
     if (!email || !password) {
       throw new HttpException(400, 'All fields must be filled');
     }
 
-    const user = await AuthService.login(req.body);
+    const user = await this.authService.login(req.body);
     if (!user) throw new HttpException(401, 'Incorrect email or password');
 
     const token = JwtService.sign({

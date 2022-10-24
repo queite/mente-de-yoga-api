@@ -17,5 +17,24 @@
       "form": []
     },
     "tests": []
+  },
+  {
+    "_id": "54c6eb46-b6bd-4d8e-9826-8e6b45711477",
+    "colId": "a8cb22a6-283c-4101-a296-0acba26c6c68",
+    "containerId": "",
+    "name": "create user",
+    "url": "localhost:3001/users",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2022-10-24T14:34:02.287Z",
+    "modified": "2022-10-24T14:44:43.194Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Student\",\n  \"userPermission\": \"student\",\n  \"email\": \"student2@gmail.com\",\n  \"password\": \"string\"\n}",
+      "form": []
+    },
+    "tests": []
   }
 ]

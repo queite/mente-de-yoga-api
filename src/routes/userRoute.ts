@@ -1,8 +1,10 @@
 import { Router } from 'express';
-import UserController from '../controllers/userController';
+import UserFactory from '../factories/userFactory';
 
 const router = Router();
 
-router.post('/', UserController.create);
+const userController = UserFactory.make();
+
+router.post('/', (req, res) => userController.create(req, res));
 
 export default router;
