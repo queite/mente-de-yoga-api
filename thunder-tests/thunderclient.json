@@ -8,12 +8,12 @@
     "method": "POST",
     "sortNum": 20000,
     "created": "2022-08-29T20:46:34.518Z",
-    "modified": "2022-09-19T10:09:37.334Z",
+    "modified": "2022-11-11T10:57:36.842Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"email\": \"example@example.com\",\n  \"password\": \"123456\"\n}",
+      "raw": "{\n  \"email\": \"student10@gmail.com\",\n  \"password\": \"string\"\n}",
       "form": []
     },
     "tests": []
@@ -27,12 +27,17 @@
     "method": "POST",
     "sortNum": 30000,
     "created": "2022-10-24T14:34:02.287Z",
-    "modified": "2022-10-24T14:44:43.194Z",
-    "headers": [],
+    "modified": "2022-11-11T10:54:36.466Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwidXNlclBlcm1pc3Npb24iOiJhZG1pbiIsImlhdCI6MTY2ODE2NDA2OH0.Og2nQq_ujGVvRiOeSoQS-MTH6TyhthXiaqf1G275afw"
+      }
+    ],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"name\": \"Student\",\n  \"userPermission\": \"student\",\n  \"email\": \"student2@gmail.com\",\n  \"password\": \"string\"\n}",
+      "raw": "{\n  \"name\": \"Student\",\n  \"userPermission\": \"student\",\n  \"email\": \"student10@gmail.com\",\n  \"password\": \"string\"\n}",
       "form": []
     },
     "tests": []
